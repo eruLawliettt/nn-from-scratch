@@ -1,4 +1,7 @@
-public static class Loss
+/// <summary>
+/// Mean Squared Error (MSE)
+/// </summary>
+public static class Loss 
 {
     public static double MSE(Matrix yTrue, Matrix yPred)
     {

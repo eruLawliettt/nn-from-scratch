@@ -64,6 +64,22 @@ public class Matrix
         return result;
     }
 
+    public static Matrix Substract(Matrix a, Matrix b)
+    {
+        if (a.Rows != b.Rows || a.Cols != b.Cols)
+            throw new Exception("Incompatible matrix sizes for subtraction.");
+
+        var result = new Matrix(a.Rows, a.Cols);
+        for (int i = 0; i < result.Rows; i++)
+        {
+            for (int j = 0; j < result.Cols; j++)
+            {
+                result.Data[i, j] = a.Data[i, j] - b.Data[i, j];
+            }
+        }
+        return result;
+    }
+
     public static Matrix Transpose(Matrix m)
     {
         var result = new Matrix(m.Cols, m.Rows);
